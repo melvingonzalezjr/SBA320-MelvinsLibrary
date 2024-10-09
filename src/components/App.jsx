@@ -13,6 +13,7 @@ export default function App() {
       <div>
         <header>
           <h1>Welcome to Melvin's Library</h1> 
+          <h4>Knowledge = Power</h4>
         </header>
         <Navbar /> 
         <main>

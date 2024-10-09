@@ -12,7 +12,7 @@ export default function Favorites() {
         const data = await res.json();
         setBooks(data.items);
       } catch (err) {
-        console.error('Error fetching books:', err);
+        console.error('Error fetching from API:', err);
       }
     };
     fetchBooks();
@@ -21,9 +21,10 @@ export default function Favorites() {
   return (
     <div>
       <h2>Favorites</h2>
-      <div>
+      {/* Each Shelf contains a collection of books, which will be stylized as 'cards */}
+      <div className='libraryShelf'>
         {books && books.map((book) => (
-          <div key={book.id}>
+          <div key={book.id} className='book-card'>
             <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title} />
             <h3>{book.volumeInfo.title}</h3>
             <p>{book.volumeInfo.description}</p>
