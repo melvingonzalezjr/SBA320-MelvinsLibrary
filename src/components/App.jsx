@@ -1,7 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
-import CategoryPage from "./CategoryPage";
+import Favorites from "./Favorites"
+import HaveRead from "./HaveRead";
+import ReadingNow from "./ReadingNow";
+import ToRead from "./ToRead";
 
 
 export default function App() {
@@ -14,23 +17,10 @@ export default function App() {
         <Navbar /> 
         <main>
           <Routes>
-            <Route path="/" element={<CategoryPage />} />
-            <Route
-              path="/favorites"
-              element={<CategoryPage category="Favorites" />}
-            />
-            <Route
-              path="/reading-now"
-              element={<CategoryPage category="Reading Now" />}
-            />
-            <Route
-              path="/to-read"
-              element={<CategoryPage category="To Read" />}
-            />
-            <Route
-              path="/have-read"
-              element={<CategoryPage category="Have Read" />}
-            />
+            <Route path="/" element={<Favorites />} />
+            <Route path="/have-read" element={<HaveRead />} />
+            <Route path="/reading-now" element={<ReadingNow />} />
+            <Route path="/to-read" element={<ToRead />} />
           </Routes>
         </main>
       </div>

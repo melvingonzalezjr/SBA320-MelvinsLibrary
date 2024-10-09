@@ -1,5 +1,7 @@
+export const apiKey = import.meta.env.VITE_LIBRARY_API_KEY;
+export const userId = '100376024772822168767';
+
 export const fetchBooks = async (query) => {
-    const apiKey = process.env.REACT_APP_LIBRARY_API_KEY;
     const response = await fetch(
       `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${API_KEY}`
     );
