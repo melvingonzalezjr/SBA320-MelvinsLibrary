@@ -25,7 +25,7 @@ export default function ToRead() {
       <div className='libraryShelf'> 
         {books && books.map((book) => (
           <div key={book.id} className='book-card'>
-            <img src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} />
+            <img src={'https://corsproxy.io/?' + book.volumeInfo.imageLinks.thumbnail} crossOrigin='Anonymous' alt={book.volumeInfo.title} />
             <h3>{book.volumeInfo.title}</h3>
             <p>{book.volumeInfo.description}</p>
           </div>
