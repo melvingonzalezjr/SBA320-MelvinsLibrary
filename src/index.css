@@ -1,22 +1,60 @@
-div {
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  /* Background library image */
+  background-image: url("./library.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+}
+
+/* Center the header */
 header {
   text-align: center;
   margin-bottom: 20px;
 }
 
-nav {
-  width: 100%; 
-  background-color: #f0f0f0;
-  padding: 10px;
+/* Style the navigation bar container */
+.navLinks {
+  width: 100%;                   /* Ensures the nav spans the full width of the page */
+  display: flex;                  /* Use flexbox to align the nav items horizontally */
+  justify-content: space-around;  /* Spread the nav items out evenly */
+  align-items: center;            /* Center the items vertically in the nav bar */
+  padding: 1em;                   /* Padding inside the nav bar */
+  position: relative;             /* Ensure the navbar stays relative */
 }
 
+/* Style for the Link components */
+nav .link {
+  color: white;                   /* Makes the links white */
+  text-decoration: none;          /* Removes underline from the links */
+  padding: 10px 20px;             /* Padding for clickable area */
+  text-align: center;             /* Centers text inside each link */
+  display: block;                 /* Make the link a block to use padding */
+}
+
+/* Ensure nav items are inline */
+.navLinks > * {
+  list-style-type: none;          /* Removes bullet points */
+}
+
+/* Hover effect on Links */
+nav .link:hover, div h3:hover, div p:hover {
+  background-color: #1cb40e;      /* Changes background color when hovering */
+  border-radius: 4px;             /* Adds rounded corners when hovering */
+}
+
+/* Main content */
 main {
   padding: 20px;
   width: 100%;
 }
-

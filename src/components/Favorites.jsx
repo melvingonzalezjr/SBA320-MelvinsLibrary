@@ -17,7 +17,7 @@ export default function Favorites() {
     };
     fetchBooks();
   }, []);
-
+  
   return (
     <div>
       <h2>Favorites</h2>
@@ -32,6 +32,7 @@ export default function Favorites() {
       </div>
     </div>
   );
+  
 }
 
 
